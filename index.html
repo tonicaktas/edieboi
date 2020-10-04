@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<title>Anänd max 60 characters</title>
+<meta name="description" 
+content="Max 160 characters">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="public/css/main.css" rel="stylesheet"/>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<script src="js/main.js"></script>
+<body>
+<div class="site-holder">
+
+<header class="header-holder">
+    <a href="/" title="Startsidan">
+        <img src="media/logo.jpg" alt="Din sida" />
+    </a>
+    <ul class="mobilemenu">
+        <li class="has-submenu"><a href="">Link-1</a>
+            <ul>
+                <li><a href="">Link-11</a></li>
+                <li><a href="">Link-12</a></li>
+                <li><a href="">Link-13</a></li> 
+            </ul>
+        </li>
+        <li><a href="">Link-2</a></li>
+        <li><a href="">Link-3</a></li>
+        <li><a href="">Link-4</a></li>
+    </ul>
+    <button class="hamburger" onclick="slidein()">
+        <span class="span-1"></span>
+        <span class="span-2"></span>
+        <span class="span-3"></span>
+    </button>
+</header>
+
+
+<section class="hero-section">
+    <img src="media/download.gif" />
+    <div class="hero-holder">
+        <h1 data-aos="fade-up" data-aos-duration="2000" >Huvud rubrik</h1>
+        <img data-aos="fade-up" data-aos-duration="2000" data-aos-delay="300" src="media/logo.jpg" alt="Glöm inte" />
+        <p data-aos="fade-up" data-aos-duration="2000" data-aos-delay="500">Lite inlednings text</p>
+    </div>
+</section>
+
+
+<section class="seo-section">
+    <div class="seo-text">
+        <h2 data-aos="fade-up" data-aos-duration="2000">Rubrik</h2>
+        <p data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor sit amet, 
+            consectetur adipiscing elit. 
+            Vestibulum elementum, orci eu 
+            pellentesque varius, ipsum risus 
+            dignissim justo, in porttitor dolor
+             purus in ex. Suspendisse sapien 
+             arcu, lobortis id finibus a, 
+             tincidunt commodo neque. 
+        </p>
+        <p data-aos="fade-up" data-aos-duration="2000">Lorem ipsum dolor sit amet, 
+        consectetur adipiscing elit. 
+        Vestibulum elementum, orci eu 
+        pellentesque varius, ipsum risus 
+        dignissim justo, in porttitor dolor
+            purus in ex. Suspendisse sapien 
+            arcu, lobortis id finibus a, 
+            tincidunt commodo neque. 
+        </p>
+    </div>
+</section>
+
+<footer></footer>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+     AOS.init();
+        function slidein(){
+            var hamburger =  document.querySelector(".hamburger");
+            var mobilemenu =  document.querySelector(".mobilemenu");
+            var span1 = document.querySelector(".span-1");
+            var span2 = document.querySelector(".span-2");
+            var span3 = document.querySelector(".span-3");
+
+            console.log(mobilemenu)
+            document.querySelector(".mobilemenu").classList.toggle('slidein');
+
+            span2.classList.toggle('bort');
+            span1.classList.toggle('top-span');
+            span3.classList.toggle('bottom-span');
+
+
+        }
+  </script>
+</body>
+</html>

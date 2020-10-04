@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Raleway:wght@300&display=swap");
+.header-holder {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  background: #000;
+  z-index: 3;
+  width: 100%;
+  height: 50px; }
+  @media (min-width: 768px) {
+    .header-holder {
+      background: transparent;
+      height: auto; } }
+  .header-holder a {
+    width: 25%;
+    padding-left: 5px;
+    position: relative;
+    z-index: 5;
+    top: 7px; }
+    @media (min-width: 768px) {
+      .header-holder a {
+        padding-left: 35px; } }
+    .header-holder a img {
+      max-width: 100px; }
+  .header-holder ul {
+    display: flex;
+    background: #000;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-100%, 0px);
+    margin-top: 50px;
+    transition: .5s; }
+    @media (min-width: 768px) {
+      .header-holder ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        width: 50%;
+        padding-right: 35px;
+        transform: none;
+        position: relative;
+        height: auto;
+        margin: 0;
+        background: transparent; } }
+    .header-holder ul li {
+      list-style-type: none;
+      text-align: center;
+      margin-left: 0px;
+      min-width: 50px;
+      max-width: 100%;
+      width: 100%;
+      min-height: 70px; }
+      @media (min-width: 768px) {
+        .header-holder ul li {
+          margin-left: 0px;
+          min-height: 10px;
+          max-width: 100px; } }
+      .header-holder ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 0;
+        font-family: "Nunito", sans-serif;
+        position: relative;
+        width: 100%;
+        text-transform: uppercase;
+        font-size: .8rem;
+        letter-spacing: 2px;
+        width: 100%;
+        display: block;
+        height: 70px;
+        font-size: 2rem; }
+        @media (min-width: 768px) {
+          .header-holder ul li a {
+            width: auto;
+            height: auto;
+            font-size: 1rem; } }
+        .header-holder ul li a::after {
+          content: "";
+          height: 1px;
+          width: 0;
+          background: #fff;
+          position: absolute;
+          left: 0;
+          transition: .3s;
+          bottom: 0; }
+        .header-holder ul li a:hover::after {
+          width: 100%; }
+    .header-holder ul .has-submenu {
+      position: relative; }
+      .header-holder ul .has-submenu:hover > ul {
+        display: flex !important;
+        flex-direction: column; }
+      .header-holder ul .has-submenu:hover a {
+        width: 100%;
+        display: block;
+        font-size: 1rem; }
+      .header-holder ul .has-submenu ul {
+        display: flex;
+        position: relative;
+        padding: 0;
+        width: 100%;
+        height: auto;
+        text-align: center;
+        align-items: flex-start;
+        transform: translate(0%, 0px) !important;
+        margin-top: 0; }
+        @media (min-width: 768px) {
+          .header-holder ul .has-submenu ul {
+            display: none;
+            position: absolute;
+            padding: 0;
+            width: 100px;
+            text-align: left;
+            align-items: flex-start; } }
+        .header-holder ul .has-submenu ul li {
+          margin: 0;
+          padding: 5px; }
+          .header-holder ul .has-submenu ul li a {
+            font-size: 2rem; }
+            @media (min-width: 768px) {
+              .header-holder ul .has-submenu ul li a {
+                font-size: 1rem; } }
+  .header-holder .hamburger {
+    position: relative;
+    border: 2px solid #fff;
+    background: #fff;
+    width: 50px;
+    height: 50px; }
+    .header-holder .hamburger span {
+      width: 90%;
+      height: 3px;
+      margin: 10px 0;
+      background: #000;
+      display: block;
+      left: 5%;
+      position: relative;
+      transform: .5s; }
+      .header-holder .hamburger span:nth-child(2) {
+        width: 75%; }
+      .header-holder .hamburger span:nth-child(3) {
+        width: 50%; }
+    @media (min-width: 768px) {
+      .header-holder .hamburger {
+        display: none; } }
+
+.slidein {
+  transform: translate(0%, 0px) !important; }
+
+.bort {
+  display: none !important; }
+
+.top-span {
+  transform: matrix(0.7071, 0.7071, 0, 1, 0, 0) !important;
+  top: 7px !important;
+  width: 100% !important; }
+
+.bottom-span {
+  transform: matrix(0.7071, -0.7071, 0, 1, 0, 0) !important;
+  top: -5px !important;
+  width: 100% !important; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+.hero-section {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column; }
+  .hero-section > img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1; }
+    @media (min-width: 1024px) {
+      .hero-section > img {
+        height: 100vh;
+        position: absolute; } }
+  .hero-section .hero-holder {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    color: #fff; }
+    @media (min-width: 667px) and (max-width: 678px) {
+      .hero-section .hero-holder {
+        position: absolute;
+        top: 0; } }
+    .hero-section .hero-holder h1 {
+      font-size: 3rem;
+      font-family: "Nunito", sans-serif;
+      letter-spacing: 5px;
+      margin: 0; }
+    .hero-section .hero-holder img {
+      max-width: 300px;
+      width: 100%;
+      margin: 15px; }
+    .hero-section .hero-holder p {
+      font-size: 1rem;
+      font-family: "Raleway", sans-serif;
+      letter-spacing: 2px; }
+
+.seo-section {
+  height: auto;
+  min-height: 50vh;
+  width: 100%; }
+  .seo-section .seo-text {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 100px 0;
+    text-align: center; }
+    .seo-section .seo-text h2 {
+      font-size: 2rem;
+      color: #3B3326;
+      font-family: "Nunito", sans-serif;
+      margin-bottom: 15px; }
+    .seo-section .seo-text p {
+      color: rgba(0, 0, 0, 0.7);
+      font-size: 1rem;
+      font-family: "Raleway", sans-serif;
+      width: 80%;
+      margin-bottom: 35px; }
