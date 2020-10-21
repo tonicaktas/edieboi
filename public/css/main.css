@@ -98,10 +98,11 @@
       .header-holder ul .has-submenu:hover > ul {
         display: flex !important;
         flex-direction: column; }
-      .header-holder ul .has-submenu:hover a {
-        width: 100%;
-        display: block;
-        font-size: 1rem; }
+      @media (min-width: 768px) {
+        .header-holder ul .has-submenu:hover a {
+          width: 100%;
+          display: block;
+          font-size: 1rem; } }
       .header-holder ul .has-submenu ul {
         display: flex;
         position: relative;
@@ -177,6 +178,14 @@
   overflow: hidden;
   display: flex;
   flex-direction: column; }
+  .hero-section video {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    z-index: -1; }
+    @media (min-width: 768px) {
+      .hero-section video {
+        top: 0px; } }
   .hero-section > img {
     width: 100%;
     height: auto;
@@ -198,7 +207,10 @@
     flex-direction: column;
     position: relative;
     z-index: 2;
-    color: #fff; }
+    color: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 2; }
     @media (min-width: 667px) and (max-width: 678px) {
       .hero-section .hero-holder {
         position: absolute;
